@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 固定站点配色，禁止跟随系统浅色/深色自动改写页面颜色 -->
+    <meta name="color-scheme" content="dark only" />
+    <meta name="supported-color-schemes" content="dark" />
+    <meta name="theme-color" content="#08090a" />
+    <title>Blue's Portfolio</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+    <link rel="stylesheet" href="assets/css/home.css" />
+    <link rel="stylesheet" href="assets/css/modal.css" />
+  </head>
+  <body class="boot-splash-active">
+  <div id="boot-splash" aria-busy="true" aria-live="polite" role="progressbar"
+       aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="页面加载中">
+    <div class="boot-splash-inner">
+      <img class="boot-splash-logo" src="assets/img/logo.png" alt="Fangjun" width="200" height="59" />
+      <div class="boot-splash-progress">
+        <div class="boot-splash-bar" aria-hidden="true"><i></i></div>
+        <p id="boot-splash-pct" class="boot-splash-pct">0%</p>
+      </div>
+    </div>
+  </div>
+  <div class="app">
+  <nav class="navbar">
+    <div class="container navbar-container">
+      <a href="index.html" class="navbar-brand" aria-current="page">
+        <img src="assets/img/logo.png" alt="Fangjun" class="navbar-brand-logo">
+      </a>
+      <button class="navbar-toggle" type="button" aria-label="打开菜单">
+        <span class="navbar-toggle-icon" aria-hidden="true">☰</span>
+      </button>
+      <ul class="navbar-menu">
+      <li class="navbar-item">
+        <a href="index.html" class="navbar-link router-link-active router-link-exact-active" aria-current="page">首页</a>
+      </li>
+      <li class="navbar-item">
+        <a href="design.html" class="navbar-link">作品集</a>
+      </li>
+      <li class="navbar-item">
+        <a href="about.html" class="navbar-link">关于</a>
+      </li>
+      <li class="navbar-item">
+        <a href="index.html#contact" class="navbar-link">联系</a>
+      </li>
+      </ul>
+    </div>
+  </nav>
+  <main class="main-content">
+    <div class="home">
+
+      <!-- Hero -->
+      <section class="home-screen hero-section" style="background-image: url('assets/img/hero-bg.jpg'); background-size: cover; background-position: center center; background-repeat: no-repeat;">
+        <div class="hero-sphere-wrap">
+          <div class="skill-sphere hero-sphere">
+            <canvas class="hero-sphere-canvas"></canvas>
+            <div class="skill-sphere-center">
+              <video class="center-video" src="assets/video/star.mp4" autoplay loop muted playsinline preload="auto" draggable="false"></video>
+            </div>
+            <div class="skill-sphere-labels"></div>
+          </div>
+        </div>
+        <div class="hero-bottom-glow" aria-hidden="true">
+          <img src="assets/img/hero-glow.png" alt="">
+        </div>
+        <div class="hero-ui">
+          <div class="container hero-ui-layout">
+            <header class="hero-header scroll-reveal scroll-reveal--hero">
+              <h1 class="hero-title"> Fang Jun's skills
+                <span class="hero-title-skills"><span>UI/UX Design ·</span> <span>AI Code ·</span> <span>Video</span></span>
+              </h1>
+              <h1 class="hero-text"> July 1991, Wuhan </h1>
+              <p class="hero-subtitle"> 向上理解业务与体验，向下穿透代码与模型，用AI延伸创造力的边界 </p>
+            </header>
+            <div class="hero-dock-wrap">
+              <div class="hero-dock" role="complementary" aria-label="页面引导">
+                <form class="hero-dock-input">
+                  <input type="text" class="hero-dock-field" placeholder="往下滑动查看更多" disabled readonly autocomplete="off">
+                </form>
+              </div>
+              <div class="hero-dock-avatar" aria-hidden="true">
+                <img src="assets/img/avatar.png" alt="" class="hero-dock-avatar-img">
+              </div>
+            </div>
+          </div>
+          <div class="hero-center">
+            <a href="design.html" class="hero-cta">Get Started</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Skills -->
+      <section class="intro-module" aria-label="My Skills">
+        <div class="container intro-module-inner">
+          <header class="skills-header scroll-reveal">
+            <h2 class="intro-title skills-module-title">
+              <span class="skills-title-lead">My</span>
+              <span class="skills-title-accent">Skills</span>
+            </h2>
+            <p class="intro-subtitle skills-header-subtitle">UI/UX · 网页 · 响应式 · 平面 · AI Code · 视频制作</p>
+          </header>
+          <div class="skills-columns">
+      <article class="skills-block scroll-reveal scroll-reveal--slower" style="--reveal-delay: 0ms;">
+        <header class="skills-block-deco">
+          <span class="skills-block-deco-label">Blue Studio</span>
+          <span class="skills-block-deco-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </header>
+        <div class="skills-block-main">
+          <div class="skills-block-copy">
+            <div class="skills-block-heading">
+              <h3 class="skills-block-title"><span class="skills-title-lead">Design</span><span class="skills-title-accent">Skills</span></h3>
+              <p class="skills-block-subtitle">UI/UX · 网页 · 响应式 · 平面</p>
+            </div>
+            <div class="skills-block-body">
+              <div class="intro-description-list">
+            <p class="intro-description-item">UI/UX设计（Figma，Axure RP，即时设计，ChatGPT Image 2）</p>
+            <p class="intro-description-item">网页设计 (Figma，Adobe Photoshop，Illustrator)</p>
+            <p class="intro-description-item">响应式设计 (Figma，Bootstrap，HTML5，CSS3，JavaScript)</p>
+            <p class="intro-description-item">平面设计（Adobe Photoshop，Adobe Illustrator，即梦AI，ChatGPT Image 2）</p>
+              </div>
+              <a href="design.html" class="skills-cta"><span class="skills-cta-label">Design View</span><span class="skills-cta-arrows" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="skills-block-visual" aria-hidden="true">
+            <div class="lottie-player intro-lottie" data-lottie="assets/lottie/design.json"></div>
+          </div>
+        </div>
+      </article>
+      <article class="skills-block scroll-reveal scroll-reveal--slower" style="--reveal-delay: 200ms;">
+        <header class="skills-block-deco">
+          <span class="skills-block-deco-label">Blue Studio</span>
+          <span class="skills-block-deco-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        </header>
+        <div class="skills-block-main">
+          <div class="skills-block-copy">
+            <div class="skills-block-heading">
+              <h3 class="skills-block-title"><span class="skills-title-lead">AI</span><span class="skills-title-accent"> Skills</span></h3>
+              <p class="skills-block-subtitle">AI Code · 视频制作</p>
+            </div>
+            <div class="skills-block-body">
+              <div class="intro-description-list">
+            <p class="intro-description-item">AI Code（OpenAI Codex，WorkBuddy，TRAE）</p>
+            <p class="intro-description-item">视频制作（Premiere Pro，After Effects，可灵AI，剪映，即梦AI）</p>
+            <p class="intro-description-item">专注 UI/UX 设计与数字产品创新的全栈设计师</p>
+            <p class="intro-description-item">擅长将创意、设计与技术相结合，打造兼具美感与实用价值的产品</p>
+              </div>
+              <a href="#" class="skills-cta"><span class="skills-cta-label">AI View</span><span class="skills-cta-arrows" aria-hidden="true">→</span></a>
+            </div>
+          </div>
+          <div class="skills-block-visual" aria-hidden="true">
+            <div class="lottie-player intro-lottie" data-lottie="assets/lottie/dev.json"></div>
+          </div>
+        </div>
+      </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Portfolio -->
+      <section class="works-screen" aria-label="Design Portfolio">
+        <div class="container works-block">
+          <header class="works-header scroll-reveal scroll-reveal--slow">
+            <div class="works-header-text">
+              <h2 class="intro-title works-title">
+                <span class="skills-title-lead">Design</span>
+                <span class="skills-title-accent"> Portfolio</span>
+              </h2>
+              <p class="intro-subtitle works-subtitle">精选设计项目 · UI / 品牌 / 可视化</p>
+            </div>
+            <a href="design.html" class="intro-cta works-cta">Design View →</a>
+          </header>
+          <div class="works-grid">
+        <article class="work-item scroll-reveal scroll-reveal--slow" style="--reveal-delay: 0ms;">
+          <div class="work-item-body">
+            <div class="work-cover"><img src="assets/works/01.png" alt="全栈设计-个人网站2.0前后台设计" loading="lazy"></div>
+            <div class="work-meta">
+              <div class="work-heading">
+                <h3 class="work-name">全栈设计-个人网站2.0前后台设计</h3>
+                <p class="work-category">网页设计</p>
+              </div>
+              <p class="work-desc">为了找工作和接单子做的个人网站2.0版本，做了前后台方便更新作品和数据统计。之前1.0版本放在2.0版本的Demo区了。</p>
+            </div>
+          </div>
+        </article>
+        <article class="work-item scroll-reveal scroll-reveal--slow" style="--reveal-delay: 180ms;">
+          <div class="work-item-body">
+            <div class="work-cover"><img src="assets/works/02.png" alt="IoT设备管理-渔慧通小程序" loading="lazy"></div>
+            <div class="work-meta">
+              <div class="work-heading">
+                <h3 class="work-name">IoT设备管理-渔慧通小程序</h3>
+                <p class="work-category">小程序</p>
+              </div>
+              <p class="work-desc">智慧渔业移动端管理平台，帮助养殖人员随时掌握鱼池状态，实现养殖过程的数字化管理。包含AI助手对话、设备远程控制。本项目中使用了AI来完成各类图标和运营类图片的生成，搭建公司移动端设计系统。
+换了个更清晰的图源~加载需要较长时间请耐心等待~</p>
+            </div>
+          </div>
+        </article>
+        <article class="work-item scroll-reveal scroll-reveal--slow" style="--reveal-delay: 360ms;">
+          <div class="work-item-body">
+            <div class="work-cover"><img src="assets/works/03.png" alt="3D仿真-医疗抢救车APP设计" loading="lazy"></div>
+            <div class="work-meta">
+              <div class="work-heading">
+                <h3 class="work-name">3D仿真-医疗抢救车APP设计</h3>
+                <p class="work-category">APP</p>
+              </div>
+              <p class="work-desc">为医疗急救场景设计的专业化APP，优化了抢救车管理流程，通过清晰的界面布局与信息层级，确保医护人员在紧急情况下能够快速、准确地获取关键设备与药品信息。</p>
+            </div>
+          </div>
+        </article>
+        <article class="work-item scroll-reveal scroll-reveal--slow" style="--reveal-delay: 0ms;">
+          <div class="work-item-body">
+            <div class="work-cover"><img src="assets/works/04.png" alt="AI识别-收方宝小程序" loading="lazy"></div>
+            <div class="work-meta">
+              <div class="work-heading">
+                <h3 class="work-name">AI识别-收方宝小程序</h3>
+                <p class="work-category">小程序</p>
+              </div>
+              <p class="work-desc">一款为木材行业打造的小程序，利用拍照和 AI 图像识别技术，实现整车原木的自动、快速点数，显著提升验收效率与准确性。</p>
+            </div>
+          </div>
+        </article>
+        <article class="work-item scroll-reveal scroll-reveal--slow" style="--reveal-delay: 180ms;">
+          <div class="work-item-body">
+            <div class="work-cover"><img src="assets/works/05.png" alt="幼儿教育-托育服务APP家长端" loading="lazy"></div>
+            <div class="work-meta">
+              <div class="work-heading">
+                <h3 class="work-name">幼儿教育-托育服务APP家长端</h3>
+                <p class="work-category">APP</p>
+              </div>
+              <p class="work-desc">负责核心视觉设计的托育平台家长端应用。创新性地融入3D化视觉元素与微动效，打造温馨、可信赖的亲子互动体验，累计完成80余个高保真界面。GIF图片较大请耐心等待~</p>
+            </div>
+          </div>
+        </article>
+        <article class="work-item scroll-reveal scroll-reveal--slow" style="--reveal-delay: 360ms;">
+          <div class="work-item-body">
+            <div class="work-cover"><img src="assets/works/06.png" alt="AI工作流探索-牛马储钱罐" loading="lazy"></div>
+            <div class="work-meta">
+              <div class="work-heading">
+                <h3 class="work-name">AI工作流探索-牛马储钱罐</h3>
+                <p class="work-category">小程序</p>
+              </div>
+              <p class="work-desc">涵盖资产管理、物品管理、AA记账与可视化资产报告等功能的小程序，结合「牛马计算器」辅助储蓄规划。全程使用 Cursor 等 AI 工具完成产品设计与开发。</p>
+            </div>
+          </div>
+        </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Me -->
+      <section class="home-screen about-more-screen" aria-label="About Me">
+        <div class="container about-more-block">
+          <header class="about-more-header scroll-reveal scroll-reveal--slowest">
+            <div class="about-more-header-text">
+              <h2 class="intro-title about-more-title">
+                <span class="skills-title-lead">About</span>
+                <span class="skills-title-accent"> Me</span>
+              </h2>
+              <p class="intro-subtitle about-more-subtitle"> 个人经历 · 教育背景 · 更多故事 </p>
+            </div>
+            <a href="about.html" class="intro-cta about-more-cta">About View →</a>
+          </header>
+          <div class="about-more-grid scroll-reveal scroll-reveal--slowest">
+          <article class="about-tile about-tile--design scroll-reveal scroll-reveal--slowest" style="--reveal-delay: 0ms;">
+            <img class="about-tile-bg" src="assets/img/about-design.jpg" alt="设计" loading="eager" decoding="async">
+            <div class="about-tile-content">
+              <div class="about-tile-head">
+                <span class="about-tile-value">30+</span><span class="about-tile-name">产品设计经验</span>
+              </div>
+              <p class="about-tile-desc">8年UI设计经验，涉及SaaS、互联网医院、数字孪生、低代码、农业、AI图像识别。
+有小程序、APP、官网、后台、大屏、运营视觉、品牌视觉等各类设计经验。</p>
+            </div>
+          </article>
+          <article class="about-tile about-tile--template scroll-reveal scroll-reveal--slowest" style="--reveal-delay: 120ms;">
+            <img class="about-tile-bg" src="assets/img/about-template.jpg" alt="模板" loading="eager" decoding="async">
+            <div class="about-tile-content">
+              <div class="about-tile-head">
+                <span class="about-tile-value">3+</span><span class="about-tile-name">可视化模板</span>
+              </div>
+              <p class="about-tile-desc">涵盖机房、风电、全球等各类业务，独立完成设计模板及模板组件、模型、前端代码。独立打通Figma设计 -Blender建模 -Three.js代码实现全流程。</p>
+            </div>
+          </article>
+          <article class="about-tile about-tile--share scroll-reveal scroll-reveal--slowest" style="--reveal-delay: 240ms;">
+            <img class="about-tile-bg" src="assets/img/about-share.jpg" alt="分享" loading="eager" decoding="async">
+            <div class="about-tile-content about-tile-content--text">
+              <div class="about-tile-head">
+                <span class="about-tile-title">设计分享</span><span class="about-tile-english">Share</span>
+              </div>
+              <p class="about-tile-desc">小红书持续分享设计作品与Three.js学习心得、Three.js应用Demo，已积累800+关注者，可搜索id【靛木】。</p>
+            </div>
+          </article>
+          <article class="about-tile about-tile--code scroll-reveal scroll-reveal--slowest" style="--reveal-delay: 360ms;">
+            <img class="about-tile-bg" src="assets/img/about-code.jpg" alt="Code" loading="eager" decoding="async">
+            <div class="about-tile-content about-tile-content--text">
+              <div class="about-tile-head">
+              <span class="about-tile-icon" aria-hidden="true"><img src="data:image/svg+xml,%3csvg%20width='40'%20height='40'%20viewBox='0%200%2040%2040'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M34%200C37.3137%200%2040%202.68629%2040%206V34C40%2037.3137%2037.3137%2040%2034%2040H6C2.68629%2040%201.28855e-07%2037.3137%200%2034V6C0%202.68629%202.68629%201.28851e-07%206%200H34ZM23.1328%2010.1025C22.0851%209.75333%2020.952%2010.3196%2020.6025%2011.3672L15.1025%2027.8672C14.7533%2028.915%2015.3195%2030.048%2016.3672%2030.3975C17.415%2030.7467%2018.5481%2030.1805%2018.8975%2029.1328L24.3975%2012.6328C24.7466%2011.5851%2024.1805%2010.4519%2023.1328%2010.1025ZM13.4141%2011.5859C12.633%2010.8049%2011.367%2010.8049%2010.5859%2011.5859L3.58594%2018.5859C2.80498%2019.367%202.80492%2020.633%203.58594%2021.4141L10.5859%2028.4141C11.367%2029.195%2012.633%2029.195%2013.4141%2028.4141C14.1951%2027.633%2014.1951%2026.367%2013.4141%2025.5859L7.82812%2020L13.4141%2014.4141C14.1951%2013.633%2014.1951%2012.367%2013.4141%2011.5859ZM29.4141%2011.5859C28.633%2010.8049%2027.367%2010.8049%2026.5859%2011.5859C25.805%2012.367%2025.8049%2013.633%2026.5859%2014.4141L32.1719%2020L26.5859%2025.5859C25.8049%2026.367%2025.8049%2027.633%2026.5859%2028.4141C27.367%2029.195%2028.633%2029.195%2029.4141%2028.4141L36.4141%2021.4141C37.1951%2020.633%2037.195%2019.367%2036.4141%2018.5859L29.4141%2011.5859Z'%20fill='white'/%3e%3c/svg%3e" alt=""></span>
+                <span class="about-tile-title">落地与还原</span><span class="about-tile-english">Code</span>
+              </div>
+              <p class="about-tile-desc">具备前端技术理解能力，能从设计视角提前预判实现成本与可行性，在评审阶段就规避落地风险。配合开发完成联调走查，确保线上效果与设计稿一致，减少反复沟通的时间损耗。</p>
+            </div>
+          </article>
+          <article class="about-tile about-tile--ai scroll-reveal scroll-reveal--slowest" style="--reveal-delay: 480ms;">
+            <img class="about-tile-bg" src="assets/img/about-ai.jpg" alt="AI" loading="eager" decoding="async">
+            <div class="about-tile-content about-tile-content--text">
+              <div class="about-tile-head">
+                <span class="about-tile-title">AI工具应用</span><span class="about-tile-english">AI Application</span>
+              </div>
+              <p class="about-tile-desc">熟练运用AI工具辅助设计全流程，在视觉探索与原型搭建中提效。同时具备AI辅助开发能力，运用VibeCoding独立完成轻量级产品的从0到1开发。对AI工具的能力边界有清晰判断，让工具真正为效率服务。</p>
+              <p class="about-tile-deco" aria-hidden="true">Proficient in AI-assisted design and development, with practical experience in building products from 0 to 1 using VibeCoding. Clear on AI's capabilities and limits, using it to boost efficiency without over-reliance.</p>
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Me -->
+      <section id="contact" class="contact-screen" aria-label="Contact Me">
+        <div class="container">
+          <div class="contact-content scroll-reveal scroll-reveal--slowest">
+            <div class="contact-heading">
+              <img class="contact-avatar" src="assets/img/avatar.png" alt="" aria-hidden="true">
+              <div class="contact-heading-text">
+                <h2 class="intro-title contact-title">
+                  <span class="skills-title-lead">Contact</span>
+                  <span class="skills-title-accent"> Me</span>
+                </h2>
+                <p class="intro-subtitle contact-subtitle">合作咨询 · 设计交流 · 随时联系</p>
+              </div>
+            </div>
+            <div class="contact-wechat">
+              <div class="contact-wechat-main">
+                <span class="contact-wechat-label">微信号：</span>
+                <ul class="contact-wechat-list">
+                  <li class="contact-wechat-item">
+                    <span class="contact-wechat-id">fjfj2088</span>
+                    <span class="contact-wechat-note">（合作交流，fjfj2088）</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="contact-socials" aria-label="社交链接">
+          <a href="#" class="contact-social-link" aria-label="Behance">
+            <img src="assets/social/s1.svg" alt="">
+          </a>
+          <a href="#" class="contact-social-link" aria-label="站酷">
+            <img src="assets/social/s2.svg" alt="">
+          </a>
+          <a href="#" class="contact-social-link" aria-label="小红书">
+            <img src="assets/social/s3.svg" alt="">
+          </a>
+          <a href="#" class="contact-social-link" aria-label="Dribbble">
+            <img src="assets/social/s4.svg" alt="">
+          </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 页脚 -->
+      <section class="home-screen home-footer-screen" aria-label="页脚">
+        <div class="footer-bottom-glow" aria-hidden="true">
+          <img src="assets/img/hero-glow.png" alt="">
+        </div>
+        <footer class="home-footer scroll-reveal">
+          <div class="container footer-container">
+            <div class="footer-column">
+              <h3>关于我</h3>
+              <p>一个平平无奇的UI设计师</p>
+            </div>
+            <div class="footer-column footer-column--links">
+              <h3>快速链接</h3>
+              <ul class="footer-links">
+                <li><a href="index.html" class="footer-link" aria-current="page">首页</a></li>
+                <li><a href="design.html" class="footer-link">作品集</a></li>
+                <li><a href="about.html" class="footer-link">关于</a></li>
+                <li><a href="index.html#contact" class="footer-link">联系</a></li>
+              </ul>
+            </div>
+            <div class="footer-column footer-column--contact">
+              <h3>联系方式</h3>
+              <ul class="footer-links">
+                <li><span class="footer-link">邮箱: 463836869@qq.com</span></li>
+                <li><span class="footer-link">合作微信: fjfj2088</span></li>
+                <li><span class="footer-link">手机号码: 13396094302</span></li>
+              </ul>
+            </div>
+          </div>
+          <div class="container footer-bottom">
+            <p>© 2026 Fangjun Portfolio. All rights reserved.</p>
+            <p class="footer-beian">
+              <a href="#" class="footer-beian-link"> </a>
+            </p>
+          </div>
+        </footer>
+      </section>
+
+    </div>
+  </main>
+  </div>
+    <script src="assets/vendor/lottie.min.js"></script>
+    <script src="assets/js/works-data.js"></script>
+    <script src="assets/js/site.js"></script>
+  </body>
+</html>

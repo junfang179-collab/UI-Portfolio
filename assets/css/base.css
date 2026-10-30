@@ -1,0 +1,281 @@
+/* ============================================================
+   Blue's Portfolio — base.css
+   设计变量 / 重置 / 导航栏 / 启动动画 / 通用按钮
+   ============================================================ */
+
+:root {
+  color-scheme: only dark;
+  --color-brand-primary: #2874ff;
+  --color-white: #ffffff;
+  --color-bg-dark: #08090a;
+  --color-brand-primary-100: #2874ff;
+  --color-brand-primary-60: rgba(40, 116, 255, .6);
+  --color-brand-primary-30: rgba(40, 116, 255, .3);
+  --color-brand-primary-10: rgba(40, 116, 255, .1);
+  --color-brand-primary-5: rgba(40, 116, 255, .05);
+  --color-white-100: #ffffff;
+  --color-white-60: rgba(255, 255, 255, .6);
+  --color-white-30: rgba(255, 255, 255, .3);
+  --color-white-10: rgba(255, 255, 255, .1);
+  --color-white-5: rgba(255, 255, 255, .05);
+  --color-bg-dark-100: #08090a;
+  --color-bg-dark-60: rgba(8, 9, 10, .6);
+  --color-bg-dark-30: rgba(8, 9, 10, .3);
+  --color-bg-dark-10: rgba(8, 9, 10, .1);
+  --color-bg-dark-5: rgba(8, 9, 10, .05);
+  --brand-primary: var(--color-brand-primary);
+  --page-bg: var(--color-bg-dark);
+
+  --bp-mobile-max: 767px;
+  --bp-ipad-portrait-max: 1024px;
+  --bp-ipad-landscape-max: 1366px;
+  --bp-desktop-min: 1367px;
+  --layout-max-width: 70vw;
+  --layout-padding-x: clamp(1rem, 2vw, 1.5rem);
+  --section-padding-y: clamp(16rem, 10vh, 32rem);
+  --section-gap-lg: clamp(10rem, 10vh, 24rem);
+  --section-gap-md: clamp(15rem, 5vh, 20rem);
+}
+
+@media (min-width:768px) and (max-width:1366px) {
+  :root {
+    --layout-max-width: min(88vw, 52rem);
+    --layout-padding-x: clamp(1.5rem, 3.5vw, 2.25rem);
+    --layout-content-inset-x: calc((100vw - min(88vw, 52rem)) / 2 + var(--layout-padding-x));
+    --section-padding-y: clamp(10rem, 8vh, 16rem);
+    --section-gap-lg: clamp(5rem, 6vh, 10rem);
+    --section-gap-md: clamp(8rem, 6vh, 12rem);
+    --navbar-height: calc(2.2rem + clamp(32px, 3.8vw, 46px));
+  }
+}
+@media (max-width:767px) {
+  :root {
+    --layout-max-width: 100%;
+    --layout-padding-x: clamp(1.25rem, 5.33vw, 40px);
+    --section-padding-y: clamp(8rem, 12vh, 12rem);
+    --section-gap-lg: clamp(3rem, 5vh, 5rem);
+    --section-gap-md: clamp(5rem, 8vh, 8rem);
+    --navbar-height: 4.8rem;
+  }
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --text-color: #333;
+  --text-light: #666;
+  --border-color: #e4e7ed;
+  --shadow: 0 2px 12px 0 rgba(0, 0, 0, .1);
+  --transition: all .3s ease;
+  --navbar-height: 5.6rem;
+}
+
+html { scrollbar-gutter: stable; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--page-bg);
+}
+
+a { color: var(--primary-color); text-decoration: none; transition: var(--transition); }
+a:hover { color: var(--secondary-color); text-decoration: underline; }
+
+h1, h2, h3, h4, h5, h6 { font-weight: 600; margin-bottom: 1rem; color: var(--dark-color); }
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
+
+.container {
+  width: 100%;
+  max-width: var(--layout-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--layout-padding-x);
+  padding-right: var(--layout-padding-x);
+  box-sizing: border-box;
+}
+
+/* ---------- 应用骨架 ---------- */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg-dark);
+}
+.main-content { flex: 1; }
+
+/* ---------- 导航栏 ---------- */
+.navbar {
+  background-color: color-mix(in srgb, var(--page-bg) 60%, transparent);
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  box-shadow: 0 1px #ffffff14;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
+}
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: var(--color-white-100);
+}
+.navbar-brand-logo {
+  display: block;
+  height: clamp(32px, 3.8vw, 46px);
+  width: auto;
+}
+.navbar-brand:hover { text-decoration: none; opacity: .92; }
+.navbar-menu {
+  display: flex;
+  gap: clamp(1rem, 2vw, 2.25rem);
+  list-style: none;
+}
+.navbar-link {
+  font-size: clamp(.9375rem, .75rem + .45vw, 1.3125rem);
+  color: #f8fafce0;
+  text-decoration: none;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.navbar-link:hover { color: var(--color-white-100); text-decoration: none; }
+.navbar-link.router-link-active { color: var(--brand-primary); text-decoration: none; }
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #f8fafc;
+  padding: .15rem .35rem;
+}
+.navbar-toggle-icon { display: block; font-size: 1.5rem; line-height: 1; }
+
+@media (max-width:1366px) {
+  .navbar-container { padding-top: 1.1rem; padding-bottom: 1.1rem; }
+  .navbar-toggle { display: block; }
+  .navbar-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--page-bg);
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    flex-direction: column;
+    align-items: stretch;
+    padding: 1.25rem var(--layout-padding-x) 1.5rem;
+    box-shadow: none;
+    display: none;
+  }
+  .navbar-menu.active { display: flex; }
+  .navbar-item { margin: .55rem 0; }
+  .navbar-menu .navbar-link { display: block; padding: .45rem .5rem; }
+}
+
+/* ---------- 启动动画 ---------- */
+html.boot-splash-active, body.boot-splash-active { overflow: hidden; }
+
+#boot-splash {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 42%, rgba(40, 116, 255, 0.14), transparent 62%),
+    #08090a;
+  color: #fff;
+  transition: opacity 0.52s cubic-bezier(0.22, 1, 0.36, 1),
+    visibility 0.52s cubic-bezier(0.22, 1, 0.36, 1);
+}
+#boot-splash.boot-splash--out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.boot-splash-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.75rem;
+  padding: 1.5rem;
+  animation: boot-splash-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.boot-splash-logo {
+  display: block;
+  height: clamp(36px, 5vw, 52px);
+  width: auto;
+  opacity: 0.96;
+}
+.boot-splash-progress {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.65rem;
+  width: min(200px, 56vw);
+}
+.boot-splash-bar {
+  width: 100%;
+  height: 2px;
+  border-radius: 1px;
+  background: rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+.boot-splash-bar > i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  border-radius: inherit;
+  background: #2874ff;
+  transition: width .18s ease;
+}
+.boot-splash-pct {
+  margin: 0;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  color: rgba(255, 255, 255, 0.6);
+  font-variant-numeric: tabular-nums;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+@keyframes boot-splash-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .boot-splash-inner { animation: none; }
+}
+
+/* ---------- 滚动浮现 ---------- */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity .85s cubic-bezier(.22, 1, .36, 1), transform .85s cubic-bezier(.22, 1, .36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+.scroll-reveal--hero { transform: translateY(56px); transition-duration: 1.35s; transition-timing-function: cubic-bezier(.16, 1, .3, 1); }
+.scroll-reveal--slow { transform: translateY(52px); transition-duration: 1.45s; transition-timing-function: cubic-bezier(.16, 1, .3, 1); }
+.scroll-reveal--slower { transform: translateY(64px); transition-duration: 1.9s; transition-timing-function: cubic-bezier(.16, 1, .3, 1); }
+.scroll-reveal--slowest { transform: translateY(72px); transition-duration: 2.2s; transition-timing-function: cubic-bezier(.16, 1, .3, 1); }
+.scroll-reveal.is-revealed { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .scroll-reveal { opacity: 1; transform: none; transition: none; will-change: auto; }
+}

@@ -1,0 +1,252 @@
+/* ============================================================
+   作品详情弹窗（还原原站 WorkModal）
+   ============================================================ */
+.work-modal {
+  --modal-primary: var(--color-brand-primary, #2874ff);
+  --modal-primary-hover: #1a5ae0;
+  --modal-primary-soft: rgba(40, 116, 255, 0.14);
+  --modal-bg: #0c0d0f;
+  --modal-surface: #14161a;
+  --modal-border: rgba(255, 255, 255, 0.1);
+  --modal-text: rgba(248, 250, 252, 0.92);
+  --modal-muted: rgba(148, 163, 184, 0.75);
+}
+.work-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.82);
+  z-index: 10050;
+  overflow-y: auto;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
+}
+.work-modal-overlay::-webkit-scrollbar { width: 6px; }
+.work-modal-overlay::-webkit-scrollbar-track { background: transparent; }
+.work-modal-overlay::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.3); border-radius: 3px; }
+.work-modal-overlay::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.5); }
+.work-modal-overlay.is-open { opacity: 1; }
+
+.work-modal-container {
+  position: relative;
+  background: var(--modal-bg);
+  border-radius: 12px;
+  width: 60vw;
+  margin: 4rem auto;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.55);
+  color: var(--modal-text);
+  transform: scale(0.95);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.work-modal-overlay.is-open .work-modal-container { transform: scale(1); opacity: 1; }
+
+.work-modal-close {
+  position: fixed;
+  top: 4rem;
+  right: calc(20vw - 72px);
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: rgba(12, 13, 15, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: rgba(248, 250, 252, 0.9);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 10051;
+}
+.work-modal-close:hover {
+  background: var(--modal-primary);
+  color: #fff;
+  transform: scale(1.08);
+}
+.work-modal-close svg { width: 20px; height: 20px; }
+
+/* 头部 */
+.work-modal-header { padding: 2.25rem 3rem 1.25rem; text-align: left; }
+.work-modal-header-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+.work-modal-header-meta {
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.65rem;
+}
+.work-modal-header h1 {
+  flex: 1;
+  min-width: 0;
+  font-size: clamp(1.25rem, 2.2vw, 1.65rem);
+  font-weight: 600;
+  line-height: 1.35;
+  margin: 0;
+  color: #fff;
+}
+.work-description {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--modal-muted);
+  margin: 0;
+  text-align: left;
+}
+.work-category-tag {
+  flex-shrink: 0;
+  padding: 0.35rem 0.85rem;
+  border: 1px solid rgba(40, 116, 255, 0.3);
+  background: transparent;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #2874ff;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.work-project-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.9rem;
+  background: #2874ff;
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.2s ease;
+}
+.work-project-link:hover { opacity: 0.9; color: #fff; text-decoration: none; }
+
+/* 主体 */
+.work-modal-body { padding: 2rem 3rem 3rem; }
+.work-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 3rem;
+}
+.work-media-slot {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--modal-surface);
+}
+.work-media-slot img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.work-extra-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-top: -0.5rem;
+}
+.info-block { display: flex; flex-direction: column; gap: 0.35rem; }
+.info-label {
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(248, 250, 252, 0.75);
+  letter-spacing: 0.02em;
+}
+.info-text, .info-line {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--modal-muted);
+}
+
+/* 密码保护 */
+.password-protected {
+  padding: 4rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+.password-form {
+  background: var(--modal-surface);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+.password-form h2 { margin-bottom: 1rem; color: #fff; font-size: 1.35rem; }
+.password-form > p { margin-bottom: 2rem; color: var(--modal-muted); }
+.form-group { margin-bottom: 1.5rem; text-align: left; }
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--modal-text);
+}
+.password-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--modal-border);
+  border-radius: 6px;
+  font-size: 1rem;
+  background: var(--modal-bg);
+  color: var(--modal-text);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.password-input::placeholder { color: rgba(148, 163, 184, 0.5); }
+.password-input:focus {
+  outline: none;
+  border-color: var(--modal-primary);
+  box-shadow: 0 0 0 3px var(--modal-primary-soft);
+}
+.submit-button {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--modal-primary);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.submit-button:hover { background: var(--modal-primary-hover); }
+.error-message { color: #f56c6c; margin-top: 1rem; font-size: 0.9rem; min-height: 1.2em; }
+
+/* 打开时锁定页面滚动 */
+body.work-modal-active { overflow: hidden; }
+
+/* 平板：全屏化 */
+@media (max-width: 1024px) {
+  .work-modal-overlay { top: var(--navbar-height, 4.8rem); background: var(--modal-bg); z-index: 900; }
+  .work-modal-container {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    min-height: 100%;
+    box-shadow: none;
+  }
+  .work-modal-close { display: none; }
+  .work-modal-header { padding: 1.75rem var(--layout-padding-x, 1.5rem) 1rem; }
+  .work-modal-body { padding: 1.25rem var(--layout-padding-x, 1.5rem) 2.5rem; }
+}
+@media (max-width: 768px) {
+  .work-modal-header-top { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+  .work-modal-header-meta { justify-content: flex-start; }
+  .work-modal-header h1 { font-size: 1.2rem; }
+  .work-category-tag, .work-project-link { align-self: flex-start; }
+  .password-protected { padding: 2.5rem 1.5rem; }
+}
+
+/* 卡片可点击 */
+.works-grid .work-item { cursor: pointer; }

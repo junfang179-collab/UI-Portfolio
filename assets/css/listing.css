@@ -1,0 +1,397 @@
+/* ============================================================
+   Blue's Portfolio — listing.css  作品集页样式
+   ============================================================ */
+
+.listing-page {
+  --listing-sidebar-width: 460px;
+  --listing-sidebar-padding: clamp(1.25rem, 2.5vw, 2rem);
+  --listing-list-padding: clamp(2.25rem, 4vw, 3.25rem);
+  --listing-primary: var(--color-brand-primary);
+  background-color: var(--color-bg-dark);
+  color: var(--color-white-100);
+  box-sizing: border-box;
+}
+.listing-hero {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  overflow: hidden;
+  height: clamp(88px, 14vh, 140px);
+}
+.listing-hero-bg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+.listing-hero-inner {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--listing-sidebar-width);
+  max-width: var(--listing-sidebar-width);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(.85rem, 1.8vh, 1.2rem) var(--listing-sidebar-padding);
+  box-sizing: border-box;
+}
+.listing-hero-title {
+  margin: 0 0 .25rem;
+  font-size: clamp(1.45rem, 3vw, 2.1rem);
+  font-weight: 600;
+  color: var(--color-white-100);
+  line-height: 1.15;
+  letter-spacing: .02em;
+  text-shadow: 0 1px 12px rgba(0, 0, 0, .45);
+}
+.listing-hero-subtitle {
+  margin: 0;
+  font-size: clamp(.82rem, 1.35vw, .98rem);
+  color: #ffffffe0;
+  line-height: 1.45;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, .4);
+}
+
+.listing-page--viewport, .listing-page--viewport .listing-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.listing-page--viewport .listing-container {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+  align-items: stretch;
+  padding: 0;
+  gap: 0;
+}
+.listing-page--viewport .listing-sidebar {
+  position: static;
+  align-self: stretch;
+  max-height: none;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  flex-shrink: 0;
+  padding: var(--listing-sidebar-padding);
+  box-sizing: border-box;
+  border-right: 1px solid var(--color-white-10);
+}
+.listing-page--viewport .listing-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.listing-page--viewport .listing-cards-scroll {
+  flex: 1;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: var(--listing-list-padding);
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-color: rgba(255, 255, 255, .22) transparent;
+  scrollbar-width: thin;
+}
+.listing-page--viewport .listing-header {
+  margin: 0 0 clamp(1.25rem, 2.2vh, 1.75rem);
+  padding: 0;
+}
+.listing-page--viewport .listing-cards-scroll::-webkit-scrollbar { width: 6px; }
+.listing-page--viewport .listing-cards-scroll::-webkit-scrollbar-thumb { background: #ffffff2e; border-radius: 999px; }
+.listing-page--viewport .listing-cards-scroll::-webkit-scrollbar-track { background: transparent; }
+
+.listing-body { width: 100%; }
+.listing-container {
+  display: flex;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: var(--layout-padding-x);
+  padding-right: var(--layout-padding-x);
+  box-sizing: border-box;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+.listing-sidebar {
+  flex: 0 0 var(--listing-sidebar-width);
+  width: var(--listing-sidebar-width);
+  max-width: var(--listing-sidebar-width);
+  padding: var(--listing-sidebar-padding);
+  box-sizing: border-box;
+  border-right: 1px solid var(--color-white-10);
+  position: sticky;
+  top: calc(var(--navbar-height, 4rem) + 1rem);
+  align-self: flex-start;
+  max-height: calc(100vh - var(--navbar-height, 4rem) - 2rem);
+  overflow-y: auto;
+}
+.listing-sidebar .sidebar-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff73;
+  margin: 0 0 1.35rem;
+  padding: 0 .15rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.listing-sidebar .category-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.listing-sidebar .category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: clamp(1.15rem, 1.8vh, 1.4rem) .15rem;
+  border: none;
+  border-bottom: 1px solid var(--color-white-10);
+  border-radius: 0;
+  background: transparent;
+  cursor: pointer;
+  transition: background .2s ease, color .2s ease, border-color .2s ease;
+  text-align: left;
+  font-size: clamp(1.2rem, 1.35vw, 1.35rem);
+  font-weight: 400;
+  color: #ffffffc7;
+  font-family: inherit;
+}
+.listing-sidebar .category-name { flex: 1; min-width: 0; line-height: 1.45; }
+.listing-sidebar .category-mark {
+  display: block;
+  width: clamp(1.1rem, 1.6vw, 1.35rem);
+  height: auto;
+  flex-shrink: 0;
+  object-fit: contain;
+  opacity: .55;
+}
+.listing-sidebar .category-item:hover:not(.active) { color: #ffffffeb; background: transparent; }
+.listing-sidebar .category-item.active {
+  background: #2672ff1a;
+  color: var(--listing-primary);
+  font-weight: 700;
+  border-bottom-color: var(--color-white-10);
+}
+.listing-sidebar .category-item.active .category-mark { opacity: 1; }
+.listing-main { flex: 1; min-width: 0; padding: 0; }
+.listing-header { flex-shrink: 0; margin-bottom: clamp(1rem, 2vh, 1.35rem); }
+.listing-header h1 {
+  margin: 0 0 .45rem;
+  font-size: clamp(1.35rem, 2.5vw, 1.85rem);
+  font-weight: 600;
+  color: var(--color-white-100);
+}
+.listing-count { margin: 0; color: #ffffff80; font-size: .95rem; }
+.listing-empty { text-align: center; padding: 4rem 2rem; color: #ffffff73; }
+.listing-page .works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1.35rem, 2.2vw, 2rem);
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+}
+.listing-page--viewport .works-grid {
+  padding: .65rem 0 .5rem;
+  gap: clamp(1.35rem, 2.2vw, 2rem);
+  box-sizing: border-box;
+}
+.listing-page .work-item {
+  width: 100%;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+.listing-page--viewport .work-item { padding-top: .65rem; margin-top: -.65rem; }
+.listing-page .work-item-body { transition: transform .4s cubic-bezier(.22, 1, .36, 1); }
+.listing-page .work-item:hover .work-item-body { transform: translateY(-8px); }
+.listing-page .work-cover {
+  width: 100%;
+  aspect-ratio: 800 / 450;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+.listing-page .work-cover:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #ffffff2e, #ffffff0f 28%, #fff0 58%);
+  opacity: 0;
+  transition: opacity .4s ease;
+  pointer-events: none;
+}
+.listing-page .work-item:hover .work-cover:after { opacity: 1; }
+.listing-page .work-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.listing-page .work-cover-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-white-5);
+  color: var(--color-white-30);
+  font-size: .8rem;
+  letter-spacing: .08em;
+}
+.listing-page .work-meta { padding-top: .9rem; }
+.listing-page .work-heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin: 0;
+}
+.listing-page .work-name {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  font-size: clamp(.92rem, 1.05vw, 1.15rem);
+  font-weight: 500;
+  color: var(--color-white-100);
+  line-height: 1.35;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.listing-page .work-item:hover .work-name { color: #ffffffeb; }
+.listing-page .work-category {
+  margin: 0;
+  font-size: clamp(.72rem, .85vw, .82rem);
+  color: #ffffff80;
+  line-height: 1.4;
+}
+.listing-page .work-date {
+  margin: .5rem 0 0;
+  font-size: clamp(.78rem, .9vw, .875rem);
+  color: #ffffff61;
+  line-height: 1.4;
+}
+
+/* 桌面端视口锁定（配合 base 中 1367px 以上的 app 锁定） */
+@media (min-width:1367px) {
+  .app--listing-lock { height: 100dvh; max-height: 100dvh; overflow: hidden; --listing-nav-padding-x: clamp(1.25rem, 2.5vw, 2rem); }
+  .app--listing-lock .main-content--listing-lock { flex: 1; min-height: 0; overflow: hidden; display: flex; flex-direction: column; }
+  .app--listing-lock .navbar-container { max-width: none; width: 100%; padding-left: var(--listing-nav-padding-x); padding-right: var(--listing-nav-padding-x); }
+}
+
+@media (max-width:1366px) {
+  .listing-page--viewport, .listing-page--viewport .listing-body,
+  .listing-page--viewport .listing-container, .listing-page--viewport .listing-main,
+  .listing-page--viewport .listing-cards-scroll {
+    flex: none;
+    min-height: auto;
+    height: auto;
+    overflow: visible;
+    -webkit-overflow-scrolling: auto;
+  }
+  .listing-page--viewport .listing-body, .listing-page--viewport .listing-main { display: block; }
+  .listing-container, .listing-page--viewport .listing-container {
+    flex-direction: column;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: var(--layout-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--layout-padding-x);
+    padding-right: var(--layout-padding-x);
+    box-sizing: border-box;
+  }
+  .listing-sidebar, .listing-page--viewport .listing-sidebar {
+    flex: none;
+    width: 100%;
+    max-width: none;
+    position: static;
+    max-height: none;
+    overflow: visible;
+    border-right: none;
+    padding: clamp(1.5rem, 2.8vh, 2rem) 0 0;
+  }
+  .listing-page--viewport .listing-main { background: transparent; padding: 0; box-sizing: border-box; }
+  .listing-page--viewport .listing-cards-scroll { padding: 0 0 clamp(1.5rem, 3vh, 2.25rem); }
+  .listing-page--viewport .listing-header { margin-bottom: .5rem; }
+  .listing-hero-inner {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: var(--layout-max-width);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--layout-padding-x);
+    padding-right: var(--layout-padding-x);
+    box-sizing: border-box;
+    justify-content: center;
+  }
+  .listing-sidebar .sidebar-title { display: none; }
+  .listing-sidebar .category-nav { flex-direction: row; flex-wrap: wrap; gap: .4rem; margin-top: .35rem; }
+  .listing-sidebar .category-item {
+    width: auto;
+    padding: .48rem .82rem;
+    font-size: clamp(.78rem, 1.5vw, .875rem);
+    font-weight: 500;
+    border: 1px solid var(--color-white-10);
+    border-radius: 4px;
+    background: transparent;
+    color: var(--color-white-60);
+    gap: .4rem;
+  }
+  .listing-sidebar .category-item:hover:not(.active) {
+    border-color: var(--color-white-30);
+    color: var(--color-white-100);
+    background: transparent;
+  }
+  .listing-sidebar .category-item.active {
+    background: transparent;
+    color: var(--listing-primary);
+    border-color: var(--color-brand-primary-60);
+    font-weight: 600;
+  }
+  .listing-sidebar .category-mark { display: block; width: .82rem; opacity: .35; }
+  .listing-sidebar .category-item.active .category-mark { opacity: 1; }
+  .listing-page .work-name { font-size: clamp(1.05rem, 1.6vw, 1.25rem); }
+  .listing-page .work-date { font-size: clamp(.82rem, 1.2vw, .9rem); }
+  .listing-page .works-grid, .listing-page--viewport .works-grid { gap: clamp(1.75rem, 2.8vw, 2.5rem); }
+}
+
+@media (max-width:1024px) {
+  .listing-page .works-grid, .listing-page--viewport .works-grid {
+    grid-template-columns: 1fr;
+    gap: clamp(2.75rem, 5vw, 3.5rem);
+    padding: 0;
+  }
+  .listing-page--viewport .listing-cards-scroll { padding: clamp(2rem, 4vh, 3rem) 0 clamp(3rem, 6vh, 4rem); }
+  .listing-page .work-name { font-size: clamp(1.15rem, 2.4vw, 1.35rem); font-weight: 600; }
+  .listing-page .work-meta { padding-top: 1.05rem; }
+  .listing-page .work-date { margin-top: .6rem; font-size: clamp(.875rem, 1.6vw, .95rem); }
+  .listing-header { display: none; }
+}
+
+@media (max-width:767px) {
+  .listing-sidebar .category-nav { gap: .32rem; }
+  .listing-sidebar .category-item { padding: .36rem .68rem; font-size: .8125rem; gap: .32rem; }
+  .listing-sidebar .category-mark { width: .72rem; }
+  .listing-hero { height: clamp(72px, 12vh, 100px); }
+  .listing-hero-inner { justify-content: center; padding-top: 0; padding-bottom: 0; }
+  .listing-page .work-name { font-size: 1.05rem; }
+  .listing-page .work-category { font-size: .78rem; }
+  .listing-page .work-date { font-size: .875rem; }
+}
