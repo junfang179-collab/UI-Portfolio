@@ -8,7 +8,8 @@
   --home-section-subtitle-size: clamp(1rem, 1vw, 1.3rem);
   --home-section-subtitle-lh: 1.5;
   --home-works-header-gap: clamp(10rem, 10vh, 24rem);
-  --home-about-more-padding-y: clamp(8rem, 8vh, 12rem);
+  /* 各区块标题统一上间距（My Skills / Design Portfolio / About Me / Contact Me） */
+  --home-section-top-gap: clamp(6rem, 8vh, 9rem);
   background-color: var(--page-bg);
 }
 
@@ -252,7 +253,7 @@
   background-color: var(--page-bg);
   color: var(--color-white-100);
   box-sizing: border-box;
-  padding: 10rem 0 14rem;
+  padding: var(--home-section-top-gap) 0 0;
 }
 .intro-module-inner {
   display: flex;
@@ -381,7 +382,8 @@
 .skills-block .intro-description-item {
   font-size: clamp(.9375rem, .85rem + .4vw, 1.0625rem);
   font-weight: 400;
-  color: var(--color-brand-primary-60);
+  /* 与 .skills-cta 文案保持一致：使用实色品牌蓝 */
+  color: var(--color-brand-primary-100);
   line-height: 1.5;
 }
 .skills-block .intro-description-list {
@@ -510,8 +512,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: var(--section-padding-y);
-  padding-bottom: calc(260 / 1920 * 100vw);
+  padding-top: var(--home-section-top-gap);
+  padding-bottom: 0;
 }
 .works-block {
   display: flex;
@@ -644,7 +646,7 @@
   justify-content: flex-start;
   height: auto;
   min-height: auto;
-  padding: var(--home-about-more-padding-y) 0;
+  padding: var(--home-section-top-gap) 0 0;
   box-sizing: border-box;
 }
 .about-more-block {
@@ -770,7 +772,7 @@
   align-items: center;
   background-color: var(--page-bg);
   color: var(--color-white-100);
-  padding-top: clamp(6rem, 8vh, 10rem);
+  padding-top: var(--home-section-top-gap);
   padding-bottom: clamp(8rem, 12vh, 9rem);
   box-sizing: border-box;
   scroll-margin-top: calc(var(--navbar-height) + .75rem);
@@ -918,7 +920,7 @@
     --home-section-title-size: clamp(1.35rem, 4.5vw, 2.75rem);
     --home-section-subtitle-size: clamp(.95rem, 1.8vw, 1.15rem);
     --home-works-header-gap: clamp(5rem, 6vh, 8rem);
-    --home-about-more-padding-y: clamp(6rem, 8vh, 10rem);
+    --home-section-top-gap: clamp(4rem, 6vh, 6rem);
   }
   .hero-section { --hero-sphere-size: min(82vmin, calc(var(--hero-available-h) * .82), 88vw); }
   .hero-header {
@@ -939,7 +941,7 @@
   .hero-center { top: calc(50% + 6rem); }
   .hero-cta { padding: .65rem 3.5rem; font-size: 1rem; }
   .hero-dock-wrap { bottom: clamp(2rem, 4vh, 6rem); }
-  .intro-module { padding: 4rem 0 6rem; }
+  .intro-module { padding: var(--home-section-top-gap) 0 0; }
   .skills-columns { flex-direction: column; gap: clamp(1.5rem, 3vw, 2.25rem); align-items: stretch; }
   .skills-block { flex: none; width: 100%; min-height: 0; padding: 5.25rem 0 2.75rem clamp(2.5rem, 8vw, 4.5rem); }
   .skills-block-body { margin-top: 1.5rem; }
@@ -967,7 +969,7 @@
     --home-section-title-size: clamp(1.65rem, 8vw, 2.25rem);
     --home-section-subtitle-size: clamp(.72rem, 2.8vw, .85rem);
     --home-works-header-gap: clamp(2.5rem, 5vh, 3.5rem);
-    --home-about-more-padding-y: clamp(5rem, 8vh, 8rem);
+    --home-section-top-gap: clamp(3rem, 5vh, 4rem);
   }
   .skills-block { padding-right: clamp(1.5rem, 5vw, 2.5rem); }
   .skills-block-copy { width: 100%; max-width: 100%; flex: 1 1 auto; }
@@ -990,7 +992,8 @@
     bottom: max(3rem, calc(env(safe-area-inset-bottom, 0px) + .5rem));
   }
   .hero-dock { width: auto; }
-  .works-screen { padding-bottom: clamp(4rem, 8vh, 7rem); }
+  .works-screen { padding-top: var(--home-section-top-gap); padding-bottom: 0; }
+  .intro-module { padding: var(--home-section-top-gap) 0 0; }
   .works-header, .about-more-header { flex-direction: column; align-items: flex-start; gap: .85rem; }
   .work-name { font-size: 1.1rem; font-weight: 600; }
   .work-desc { display: none; }
@@ -1000,7 +1003,7 @@
   .about-tile-value { font-size: 3.5rem; }
   .about-tile-title { font-size: 1.5rem; }
   .about-tile-content { padding: 1.75rem; }
-  .contact-screen { padding-top: clamp(5rem, 8vh, 7rem); padding-bottom: clamp(8rem, 14vh, 9rem); }
+  .contact-screen { padding-top: var(--home-section-top-gap); padding-bottom: clamp(8rem, 14vh, 9rem); }
   .contact-wechat { flex-direction: column; align-items: flex-start; gap: 3.25rem; margin-top: 3.75rem; }
   .contact-socials { justify-content: flex-start; }
   .home-footer .footer-container { display: none; }
