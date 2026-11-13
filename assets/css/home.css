@@ -884,7 +884,7 @@
 }
 .home-footer .footer-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: 2fr 1fr 1.2fr;
   gap: 2rem;
 }
 .home-footer .footer-column h3 {
@@ -892,7 +892,12 @@
   margin-bottom: 1.25rem;
   font-size: 1.1rem;
 }
-.home-footer .footer-column p { color: #ffffffa6; line-height: 1.6; margin: 0; }
+.home-footer .footer-column p {
+  color: #ffffffa6;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 26rem;
+}
 .home-footer .footer-links { list-style: none; padding: 0; margin: 0; }
 .home-footer .footer-link {
   color: #ffffffbf;
