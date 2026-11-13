@@ -286,6 +286,15 @@
   color: #ffffff61;
   line-height: 1.4;
 }
+.listing-page .work-description {
+  margin: .5rem 0 0;
+  font-size: clamp(.78rem, .9vw, .875rem);
+  color: #ffffff61;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 
 /* 桌面端视口锁定（配合 base 中 1367px 以上的 app 锁定） */
 @media (min-width:1367px) {
@@ -369,6 +378,7 @@
   .listing-sidebar .category-item.active .category-mark { opacity: 1; }
   .listing-page .work-name { font-size: clamp(1.05rem, 1.6vw, 1.25rem); }
   .listing-page .work-date { font-size: clamp(.82rem, 1.2vw, .9rem); }
+  .listing-page .work-description { font-size: clamp(.82rem, 1.2vw, .9rem); }
   .listing-page .works-grid, .listing-page--viewport .works-grid { gap: clamp(1.75rem, 2.8vw, 2.5rem); }
 }
 
@@ -382,6 +392,7 @@
   .listing-page .work-name { font-size: clamp(1.15rem, 2.4vw, 1.35rem); font-weight: 600; }
   .listing-page .work-meta { padding-top: 1.05rem; }
   .listing-page .work-date { margin-top: .6rem; font-size: clamp(.875rem, 1.6vw, .95rem); }
+  .listing-page .work-description { margin-top: .6rem; font-size: clamp(.875rem, 1.6vw, .95rem); }
   .listing-header { display: none; }
 }
 

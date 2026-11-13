@@ -248,13 +248,6 @@
   }
 
   /* ---------- 作品详情弹窗 ---------- */
-  function formatDate(d) {
-    if (!d) return '';
-    if (!/^\d{4}-\d{2}-\d{2}/.test(d)) return d;
-    var parts = d.slice(0, 10).split('-');
-    return parseInt(parts[0], 10) + '年' + parseInt(parts[1], 10) + '月' + parseInt(parts[2], 10) + '日';
-  }
-
   function buildModal() {
     var overlay = document.createElement('div');
     overlay.className = 'work-modal work-modal-overlay';
@@ -296,11 +289,6 @@
         return '<div class="work-media-slot"><img src="' + src + '" alt="" loading="lazy"></div>';
       }).join('') + '</div>';
     }
-    var info = '';
-    if (w.tech) info += '<div class="info-block"><h2 class="info-label">技术栈</h2><p class="info-text"></p></div>';
-    if (w.date) info += '<p class="info-line"></p>';
-    if (w.client) info += '<p class="info-line"></p>';
-    if (info) html += '<div class="work-extra-info">' + info + '</div>';
     html += '</div>';
     content.innerHTML = html;
     content.querySelector('h1').textContent = w.title;
@@ -310,11 +298,6 @@
       link.href = /^https?:\/\//i.test(w.project_url) ? w.project_url : 'https://' + w.project_url;
     }
     if (w.description) content.querySelector('.work-description').textContent = w.description;
-    if (w.tech) content.querySelector('.info-text').textContent = w.tech;
-    var lines = content.querySelectorAll('.work-extra-info .info-line');
-    var li = 0;
-    if (w.date && lines[li]) lines[li++].textContent = formatDate(w.date);
-    if (w.client && lines[li]) lines[li].textContent = '客户：' + w.client;
   }
 
   function initWorkModal() {
