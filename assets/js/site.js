@@ -71,7 +71,7 @@
     if (!wrap) return;
     var labelsBox = wrap.querySelector('.skill-sphere-labels');
     var canvas = wrap.querySelector('.skill-sphere-canvas');
-    var pool = ['Figma', 'Axure RP', '即时设计', 'ChatGPT Image 2', 'Photoshop', 'Illustrator', 'OpenAI Codex', 'WorkBuddy', 'TRAE', 'Bootstrap', 'HTML5', 'CSS3', 'JavaScript', '即梦AI', 'Premiere Pro', 'After Effects', '可灵AI', '剪映'];
+    var pool = ['Figma', 'Axure RP', '即时设计', 'ChatGPT Image 2', 'Photoshop', 'Illustrator', 'OpenAI Codex', 'WorkBuddy', 'TRAE', 'Vibecoding', 'Speccoding', 'Bootstrap', 'HTML5', 'CSS3', 'JavaScript', '即梦AI', 'Premiere Pro', 'After Effects', '可灵AI', '剪映'];
     var COUNT = 30;
     var R = 2.1;
     var camZ = 6.2;
