@@ -207,16 +207,16 @@ window.WORKS_DATA=[
   "project_url": "",
   "protected": false,
   "images": [
-   "assets/works/17/01.png",
+   "assets/works/17/01.webp",
    "assets/works/17/02.png",
-   "assets/works/17/03.png",
-   "assets/works/17/04.png",
-   "assets/works/17/05.png",
-   "assets/works/17/06.png",
-   "assets/works/17/07.png",
+   "assets/works/17/03.webp",
+   "assets/works/17/04.webp",
+   "assets/works/17/05.webp",
+   "assets/works/17/06.webp",
+   "assets/works/17/07.webp",
    "assets/works/17/08.png",
-   "assets/works/17/09.png",
-   "assets/works/17/10.png"
+   "assets/works/17/09.webp",
+   "assets/works/17/10.webp"
   ]
  },
  {

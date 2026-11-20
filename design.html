@@ -4,14 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="assets/img/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- 固定站点配色，禁止跟随系统浅色/深色自动改写页面颜色 -->
     <meta name="color-scheme" content="dark only" />
     <meta name="supported-color-schemes" content="dark" />
     <meta name="theme-color" content="#08090a" />
-    <title>作品集</title>
+    <title>作品集 — Fangjun</title>
     <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/listing.css" />
     <link rel="stylesheet" href="assets/css/modal.css" />
+    <link rel="stylesheet" href="assets/css/portfolio.css" />
   </head>
   <body class="boot-splash-active">
   <div id="boot-splash" aria-busy="true" aria-live="polite" role="progressbar"
@@ -24,45 +23,29 @@
       </div>
     </div>
   </div>
-  <div class="app app--listing-lock">
-  <nav class="navbar">
-    <div class="container navbar-container">
-      <a href="index.html" class="navbar-brand" aria-current="page">
-        <img src="assets/img/logo.png" alt="Fangjun" class="navbar-brand-logo">
-      </a>
-      <button class="navbar-toggle" type="button" aria-label="打开菜单">
-        <span class="navbar-toggle-icon" aria-hidden="true">☰</span>
-      </button>
-      <ul class="navbar-menu">
-      <li class="navbar-item">
-        <a href="index.html" class="navbar-link">首页</a>
-      </li>
-      <li class="navbar-item">
-        <a href="design.html" class="navbar-link router-link-active router-link-exact-active" aria-current="page">作品集</a>
-      </li>
-      <li class="navbar-item">
-        <a href="about.html" class="navbar-link">关于</a>
-      </li>
-      <li class="navbar-item">
-        <a href="index.html#contact" class="navbar-link">联系</a>
-      </li>
-      </ul>
-    </div>
-  </nav>
-  <main class="main-content main-content--listing-lock">
-    <div class="listing-page works listing-page--viewport">
-      <section class="listing-hero" aria-label="页面标题">
-        <img class="listing-hero-bg" src="assets/img/design-hero.jpg" alt="">
-        <div class="listing-hero-inner">
-          <h1 class="listing-hero-title">Design Portfolio</h1>
-          <p class="listing-hero-subtitle">精选设计项目 · UI / 品牌 / 可视化</p>
-        </div>
-      </section>
-      <div class="listing-body">
-        <div class="listing-container">
-          <aside class="listing-sidebar">
-            <h2 class="sidebar-title">项目分类</h2>
-            <nav class="category-nav" aria-label="项目分类">
+  <main class="listing-site">
+    <section class="listing-hero" id="top">
+      <div class="hero-grid" aria-hidden="true"></div>
+      <header class="listing-header-bar">
+        <a class="listing-brand" href="index.html" aria-label="Fangjun 首页"><span class="brand-mark" aria-hidden="true"></span><span>Fangjun</span></a>
+        <button class="cadet-menu-button" type="button" aria-label="打开导航菜单" aria-expanded="false" aria-controls="cadet-menu"><i></i><i></i><i></i></button>
+        <nav class="cadet-menu" id="cadet-menu" aria-label="主导航">
+          <a href="index.html">首页</a><a href="design.html">作品集</a><a href="about.html">关于</a><a href="index.html#contact">联系</a>
+        </nav>
+      </header>
+      <div class="listing-hero-copy">
+        <p class="hero-kicker"><span aria-hidden="true"></span>SELECTED WORK · 2022 — 2026</p>
+        <h1 class="display-heading">Design<br><span>Portfolio<span class="hero-period">.</span></span></h1>
+        <p class="hero-subtitle">精选设计项目 · UI / 品牌 / 可视化</p>
+      </div>
+    </section>
+
+    <section class="portfolio-body" id="works">
+      <div class="section-label"><span>01 / ALL PROJECTS</span><span>UI · WEB · BRAND · MOTION</span></div>
+      <div class="portfolio-layout">
+        <aside class="listing-sidebar">
+          <h2 class="sidebar-title">项目分类</h2>
+          <nav class="category-nav" aria-label="项目分类">
             <button type="button" class="category-item active" data-category="">
               <span class="category-name">全部项目</span>
               <img class="category-mark" src="assets/img/star.png" alt="" aria-hidden="true">
@@ -91,146 +74,146 @@
               <span class="category-name">运营设计</span>
               <img class="category-mark" src="assets/img/star.png" alt="" aria-hidden="true">
             </button>
-            </nav>
-          </aside>
-          <main class="listing-main">
-            <div class="listing-cards-scroll">
-              <header class="listing-header">
-                <h1>全部项目</h1>
-                <p class="listing-count">共 11 个作品</p>
-              </header>
-              <section class="works-grid">
-          <article class="work-item" data-category="ui">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/24ifm-cover.png" alt="24iFM APP设计（物业管理APP）" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+          </nav>
+        </aside>
+
+        <div class="listing-main">
+          <header class="listing-header">
+            <h1>全部项目</h1>
+            <p class="listing-count">共 11 个作品</p>
+          </header>
+          <section class="works-grid">
+            <article class="work-item" data-category="ui">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/24ifm-cover.png" alt="24iFM APP设计（物业管理APP）" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">24iFM APP设计（物业管理APP）</h3>
+                  <p class="work-description">24iFM 是面向新加坡公寓住户的一站式社区生活平台，旨在让社区生活更简单一点。提供物业缴费、家政预约、社区公告与邻里互动等一站式服务。</p>
                 </div>
-                <p class="work-description">24iFM 是面向新加坡公寓住户的一站式社区生活平台，旨在让社区生活更简单一点。提供物业缴费、家政预约、社区公告与邻里互动等一站式服务。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="ui">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/yycircle-cover.png" alt="YY Circle APP设计（灵活就业平台）" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="ui">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/yycircle-cover.png" alt="YY Circle APP设计（灵活就业平台）" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">YY Circle APP设计（灵活就业平台）</h3>
+                  <p class="work-description">YY Circle 是 YY Group 旗下的按需灵活人力/临时工招聘平台，主打兼职、临时人手撮合与劳动力管理，让灵活就业者从发现机会到管理每一份工作都更轻松。</p>
                 </div>
-                <p class="work-description">YY Circle 是 YY Group 旗下的按需灵活人力/临时工招聘平台，主打兼职、临时人手撮合与劳动力管理，让灵活就业者从发现机会到管理每一份工作都更轻松。提供岗位发现、班次选择、排期管理与薪资结算等一站式服务。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="ui">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/yybusiness-cover.png" alt="YY Business APP设计（灵活用工管理平台）" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="ui">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/yybusiness-cover.png" alt="YY Business APP设计（灵活用工管理平台）" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">YY Business APP设计（灵活用工管理平台）</h3>
+                  <p class="work-description">YY Business 是面向新加坡酒店、餐饮、活动服务等行业的灵活用工管理平台，为服务业打造的一体化企业端工作台，让排班、考勤与员工评价从复杂走向清晰。</p>
                 </div>
-                <p class="work-description">YY Business 是面向新加坡酒店、餐饮、活动服务等行业的灵活用工管理平台（Web 端工作台），为服务业打造的一体化企业端工作台，让排班、考勤与员工评价从复杂走向清晰。提供用工需求、签到考勤、工时核算、员工评价与消息通知等一站式管理服务。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="ui">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/yypet-cover.png" alt="YY Pet设计（YY宠物）" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="ui">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/yypet-cover.png" alt="YY Pet设计（YY宠物）" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">YY Pet设计（YY宠物）</h3>
+                  <p class="work-description">YY Pet 是一款以虚拟宠物陪伴、养成与轻社交为核心的休闲养成产品，把喂食、互动、好友拜访与任务奖励组合成轻盈的日常循环。</p>
                 </div>
-                <p class="work-description">YY Pet 是一款以虚拟宠物陪伴、养成与轻社交为核心的休闲养成产品，把喂食、互动、好友拜访与任务奖励组合成轻盈的日常循环。提供虚拟宠物、休闲养成与社交互动等一站式陪伴体验。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="web">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/hongye-cover.png" alt="HongYe Group官网设计" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="web">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/hongye-cover.png" alt="HongYe Group官网设计" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">HongYe Group官网设计</h3>
+                  <p class="work-description">Hong Ye Group 是新加坡的综合设施管理（IFM）集团，本案例重塑企业服务官网，把多元设施管理能力转化为清晰、可信、可转化的数字品牌体验。</p>
                 </div>
-                <p class="work-description">Hong Ye Group 是新加坡的综合设施管理（IFM）集团，面向商业、住宅、工业与公共空间提供清洁、消毒、虫害防治、安保与环境维护的一体化服务。本案例重塑企业服务官网，把多元设施管理能力转化为清晰、可信、可转化的数字品牌体验。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="web">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/yyforce-cover.png" alt="YYForce集团官网（原YYGH）" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="web">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/yyforce-cover.png" alt="YYForce集团官网（原YYGH）" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">YYForce集团官网（原YYGH）</h3>
+                  <p class="work-description">YYFORCE Inc. 是技术驱动的人力解决方案与综合设施管理集团，本案例重塑集团官网，把复杂业务收进一套清晰、统一的界面语言。</p>
                 </div>
-                <p class="work-description">YYFORCE Inc.（NASDAQ: YFOR）是技术驱动的人力解决方案与综合设施管理集团，以 YY Circle 连接企业与灵活就业者，以 24iFM 统筹现场服务，并以 Yolara AI 与人形机器人实验室推进智能化。本案例重塑集团官网，把复杂业务收进一套清晰、统一的界面语言，让多元业务读起来始终像同一个产品。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="web">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/yycircleweb-cover.png" alt="YY Circle官网" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="web">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/yycircleweb-cover.png" alt="YY Circle官网" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">YY Circle官网</h3>
+                  <p class="work-description">YY Circle 是 AI 驱动的按需用工平台，本案例重塑官网，把双边用工的复杂流程译成清晰、可信、可快速行动的数字体验。</p>
                 </div>
-                <p class="work-description">YY Circle 是 AI 驱动的按需用工平台，企业发布临时与轮班岗位，平台从 10 万+ 技能工人中完成智能匹配，覆盖酒店、餐饮、零售、电商与会展等行业。本案例重塑官网，把双边用工的复杂流程译成清晰、可信、可快速行动的数字体验，让每一次灵活匹配更快发生。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="admin">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/smarticlean-cover.png" alt="Smart iClean管理系统" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="admin">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/smarticlean-cover.png" alt="Smart iClean管理系统" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">Smart iClean管理系统</h3>
+                  <p class="work-description">Smart iClean 是一套以实时数据驱动空间运维决策的智慧清洁数据平台，让清洁管理从「数据展示」走向「运营决策」。</p>
                 </div>
-                <p class="work-description">Smart iClean 是一套以实时数据驱动空间运维决策的智慧清洁数据平台，把空间、事件与人员映射为统一的数据对象，让清洁管理从「数据展示」走向「运营决策」。提供全局驾驶舱、空间部署、项目管理、质量评估与配置表单等一站式管理服务。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="graphic">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/banner-cover.png" alt="Banner设计合集" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="graphic">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/banner-cover.png" alt="Banner设计合集" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">Banner设计合集</h3>
+                  <p class="work-description">涵盖主题插画、3D 海报、商业横幅与企业主视觉的综合性 Banner 设计合集，为品牌活动、产品推广与节日营销等场景提供创意视觉方案。</p>
                 </div>
-                <p class="work-description">涵盖主题插画、3D 海报、商业横幅与企业主视觉的综合性 Banner 设计合集，为品牌活动、产品推广与节日营销等场景提供创意视觉方案。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="11">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/16.png" alt="组件系统-插画组件库系统设计" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="11">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/16.png" alt="组件系统-插画组件库系统设计" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">组件系统-插画组件库系统设计</h3>
+                  <p class="work-description">为教育产品线设计的模块化插画组件库。从人物角色构建到场景元素设计，建立了完整的视觉资产体系，提升了运营设计的效率与品牌一致性。</p>
                 </div>
-                <p class="work-description">为教育产品线设计的模块化插画组件库。从人物角色构建到场景元素设计，建立了完整的视觉资产体系，显著提升了运营设计的效率与品牌一致性。</p>
               </div>
-            </div>
-          </article>
-          <article class="work-item" data-category="10">
-            <div class="work-item-body">
-              <div class="work-cover"><img src="assets/works/17.png" alt="运营视觉设计合集" loading="lazy"></div>
-              <div class="work-meta">
-                <div class="work-heading">
+            </article>
+            <article class="work-item" data-category="10">
+              <div class="work-item-body">
+                <div class="work-cover"><img src="assets/works/17.png" alt="运营视觉设计合集" loading="lazy"></div>
+                <div class="work-meta">
                   <h3 class="work-name">运营视觉设计合集</h3>
+                  <p class="work-description">涵盖插画风格与3D视觉的综合性运营设计项目集。通过多元化的视觉表达方式，为品牌活动、产品推广等场景提供创意解决方案。</p>
                 </div>
-                <p class="work-description">涵盖插画风格与3D视觉的综合性运营设计项目集。通过多元化的视觉表达方式，为品牌活动、产品推广等场景提供创意解决方案，并形成系统性的设计方法论总结。</p>
               </div>
-            </div>
-          </article>
-              </section>
-            </div>
-          </main>
+            </article>
+          </section>
         </div>
       </div>
-    </div>
+
+      <footer class="listing-footer">
+        <span>WUHAN · CHINA</span>
+        <a href="#top">BACK TO TOP ↑</a>
+        <span>© 2026 FANGJUN</span>
+      </footer>
+    </section>
   </main>
-  </div>
-    <script src="assets/vendor/lottie.min.js"></script>
-    <script src="assets/js/works-data.js"></script>
-    <script src="assets/js/site.js"></script>
+  <script src="assets/vendor/lottie.min.js"></script>
+  <script src="assets/js/works-data.js"></script>
+  <script src="assets/js/site.js"></script>
+  <script>
+    (function () {
+      var btn = document.querySelector('.cadet-menu-button');
+      var menu = document.getElementById('cadet-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var isOpen = btn.getAttribute('aria-expanded') !== 'true';
+        btn.setAttribute('aria-expanded', String(isOpen));
+        btn.setAttribute('aria-label', isOpen ? '关闭导航菜单' : '打开导航菜单');
+        menu.classList.toggle('is-open', isOpen);
+      });
+      menu.addEventListener('click', function (e) {
+        if (!e.target.closest('a')) return;
+        btn.setAttribute('aria-expanded', 'false');
+        btn.setAttribute('aria-label', '打开导航菜单');
+        menu.classList.remove('is-open');
+      });
+    })();
+  </script>
   </body>
 </html>

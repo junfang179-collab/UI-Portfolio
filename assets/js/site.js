@@ -68,7 +68,7 @@
   /* ---------- 3D 技能球（纯 JS 实现球面标签旋转） ---------- */
   function initSkillSphere() {
     var wrap = document.querySelector('.skill-sphere');
-    if (!wrap) return;
+    if (!wrap || !wrap.getClientRects().length) return;
     var labelsBox = wrap.querySelector('.skill-sphere-labels');
     var canvas = wrap.querySelector('.skill-sphere-canvas');
     var pool = ['Figma', 'Axure RP', '即时设计', 'ChatGPT Image 2', 'Photoshop', 'Illustrator', 'OpenAI Codex', 'WorkBuddy', 'TRAE', 'Vibecoding', 'Speccoding', 'Bootstrap', 'HTML5', 'CSS3', 'JavaScript', '即梦AI', 'Premiere Pro', 'After Effects', '可灵AI', '剪映'];
@@ -185,6 +185,7 @@
   function initLottie() {
     if (typeof lottie === 'undefined') return;
     document.querySelectorAll('[data-lottie]').forEach(function (el) {
+      if (!el.getClientRects().length) return;
       var src = el.getAttribute('data-lottie');
       if (!src) return;
       fetch(src)
