@@ -195,7 +195,7 @@ window.WORKS_DATA=[
  },
  {
   "id": 17,
-  "cover": "assets/works/16.png",
+  "cover": "assets/works/16.webp",
   "title": "组件系统-插画组件库系统设计",
   "category": "品牌建设",
   "date": "2022-08-31T16:00:00.000Z",
@@ -220,33 +220,65 @@ window.WORKS_DATA=[
   ]
  },
  {
-  "id": 16,
-  "cover": "assets/works/17.png",
-  "title": "运营视觉设计合集",
-  "category": "运营设计",
-  "date": "2022-08-31T16:00:00.000Z",
-  "description": "涵盖插画风格与3D视觉的综合性运营设计项目集。通过多元化的视觉表达方式，为品牌活动、产品推广等场景提供创意解决方案，并形成系统性的设计方法论总结。",
+  "id": 39,
+  "cover": "assets/works/campus-cover.png",
+  "title": "CAMPUS·TWIN 智慧校园数字孪生平台设计",
+  "category": "数据可视化",
+  "date": "2026-11-01T00:00:00.000Z",
+  "description": "面向智慧校园的数字孪生可视化平台。以深林绿与荧光青为主色调，构建覆盖全局态势、能耗监控、告警事件与趋势分析的管理大屏，并延展 AI 智能巡检助手交互、完整设计规范与 Blender 三维场景资产，形成从数据感知到空间交互的一体化设计体系。",
   "tech": [
-   "运营设计，大促弹窗，大促物料，公司级宣传图，月度促销"
+   "数据可视化，数字孪生，B端大屏，设计系统，AI交互，Blender 3D建模"
   ],
   "client": "公司需求",
   "project_url": "",
   "protected": false,
   "images": [
-   "assets/works/16/01.png",
-   "assets/works/16/02.png",
-   "assets/works/16/03.png",
-   "assets/works/16/04.png",
-   "assets/works/16/05.png",
-   "assets/works/16/06.png",
-   "assets/works/16/07.png",
-   "assets/works/16/08.png",
-   "assets/works/16/09.png",
-   "assets/works/16/10.png",
-   "assets/works/16/11.png",
-   "assets/works/16/12.png",
-   "assets/works/16/13.png",
-   "assets/works/16/14.png"
+   "assets/works/campus/01.png",
+   "assets/works/campus/02.png",
+   "assets/works/campus/03.png",
+   "assets/works/campus/04.png"
+  ]
+ },
+ {
+  "id": 40,
+  "cover": "assets/works/travel-cover.jpg",
+  "title": "说走就走·旅行出行App与小程序设计",
+  "category": "UI设计",
+  "date": "2026-11-01T00:00:00.000Z",
+  "description": "说走就走是一套覆盖 App 与小程序双端的旅行出行产品设计。以卡通狐狸 IP 为核心视觉符号，围绕机票、出境游、国内游等预订场景，构建明快活泼的蓝黄配色与卡片化信息架构；并沉淀色彩、字体、图标、组件与栅格等完整设计规范，打造从品牌 IP 到界面落地的一致性体验。",
+  "tech": [
+   "APP设计，小程序设计，UI/UX设计，IP形象设计，设计规范系统，旅行出行平台"
+  ],
+  "client": "个人项目",
+  "project_url": "",
+  "protected": false,
+  "images": [
+   "assets/works/travel/01.jpg",
+   "assets/works/travel/02.jpg",
+   "assets/works/travel/03.jpg",
+   "assets/works/travel/04.jpg",
+   "assets/works/travel/05.webp"
+  ]
+ },
+ {
+  "id": 41,
+  "cover": "assets/works/doudou-cover.png",
+  "title": "豆豆 IP形象设计（潮玩盲盒企划）",
+  "category": "品牌建设",
+  "date": "2026-11-01T00:00:00.000Z",
+  "description": "豆豆是一套面向 AI 学习搭子概念的潮玩盲盒 IP 企划。以暖橙柴犬为原型，塑造戴眼镜与耳机、穿针织外套的治愈系角色，延展角色三视图设定规范、尺寸比例与材质色彩标准、日常九则表情包、豆豆的一天时间轴长卷与功能说明页，并配套社媒封面 Banner，形成从角色设定到商业落地的完整品牌视觉体系。",
+  "tech": [
+   "IP形象设计，潮玩盲盒，角色设定规范，表情包设计，品牌视觉，社媒Banner"
+  ],
+  "client": "个人项目",
+  "project_url": "",
+  "protected": false,
+  "images": [
+   "assets/works/doudou/01.png",
+   "assets/works/doudou/02.jpg",
+   "assets/works/doudou/03.jpg",
+   "assets/works/doudou/04.png",
+   "assets/works/doudou/05.png"
   ]
  }
 ];

@@ -103,12 +103,12 @@ body { background: #0c0c0c; color: #d7e2ea; font-family: 'Kanit', sans-serif; }
 .hero-subtitle { margin: 1.6rem 0 0; color: rgba(215, 226, 234, .66); font-size: clamp(.9rem, 1.4vw, 1.1rem); font-weight: 300; letter-spacing: .06em; position: relative; }
 
 /* 内容区 */
-.about-body-wrap { padding: 5rem clamp(1.25rem, 7vw, 7rem) 8rem; }
+.about-body-wrap { padding: 4.5rem clamp(1.25rem, 7vw, 7rem) 8rem; }
 .section-label { display: flex; justify-content: space-between; align-items: center; gap: 1rem; color: rgba(215, 226, 234, .52); font-size: .7rem; font-weight: 400; letter-spacing: .17em; text-transform: uppercase; padding-bottom: 1rem; border-bottom: 1px solid rgba(215, 226, 234, .2); }
 
 /* 个人简介 */
-.profile-section { padding-top: 3rem; }
-.profile-layout { display: grid; grid-template-columns: minmax(220px, .6fr) minmax(0, 1.4fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; padding: 3rem 0 2rem; }
+.profile-section { padding-top: 0; }
+.profile-layout { display: grid; grid-template-columns: minmax(220px, .6fr) minmax(0, 1.4fr); gap: clamp(2rem, 6vw, 6rem); align-items: start; padding: 2.5rem 0 2rem; }
 .profile-figure { position: sticky; top: 2rem; }
 .profile-figure .profile-avatar {
   width: 100%;
@@ -160,14 +160,15 @@ body { background: #0c0c0c; color: #d7e2ea; font-family: 'Kanit', sans-serif; }
 .progress-fill { width: 0; height: 100%; border-radius: inherit; background: linear-gradient(90deg, #41d8d2 0%, #748bff 65%, #ba72de 100%); transition: width 1s cubic-bezier(.2, .7, .2, 1); }
 
 /* 页脚 */
-.about-footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 6rem; padding: 1.2rem 0 .5rem; border-top: 1px solid rgba(215, 226, 234, .2); color: rgba(215, 226, 234, .48); font-size: .62rem; letter-spacing: .14em; text-transform: uppercase; }
+.about-footer { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 6rem; padding: 1.2rem 0 .5rem; border-top: 1px solid rgba(215, 226, 234, .2); color: rgba(215, 226, 234, .48); font-size: .58rem; letter-spacing: .17em; text-transform: uppercase; }
+.about-footer a { color: inherit; }
 .about-footer a:hover { color: #d4a0ff; }
 
 @media (max-width: 900px) {
   .listing-header-bar { left: 5%; right: 5%; top: 4.6%; }
-  .about-hero { min-height: 74svh; padding-left: 1.25rem; padding-right: 1.25rem; }
+  .about-hero { min-height: 0; justify-content: flex-start; padding: 7rem 1.25rem 2.5rem; }
   .display-heading { font-size: clamp(3.2rem, 13vw, 6rem); }
-  .about-body-wrap { padding: 3rem 1.25rem 5rem; }
+  .about-body-wrap { padding: 2.5rem 1.25rem 5rem; }
   .profile-layout { grid-template-columns: 1fr; gap: 2rem; }
   .profile-figure { position: static; }
   .profile-figure .profile-avatar { max-width: 240px; }

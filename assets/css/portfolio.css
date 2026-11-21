@@ -262,17 +262,18 @@ body { background: #0c0c0c; color: #d7e2ea; font-family: 'Kanit', sans-serif; }
   padding: 1.2rem 0 .5rem;
   border-top: 1px solid rgba(215, 226, 234, .2);
   color: rgba(215, 226, 234, .48);
-  font-size: .62rem;
-  letter-spacing: .14em;
+  font-size: .58rem;
+  letter-spacing: .17em;
   text-transform: uppercase;
 }
+.listing-footer a { color: inherit; }
 .listing-footer a:hover { color: #d4a0ff; }
 
 @media (max-width: 900px) {
   .listing-header-bar { left: 5%; right: 5%; top: 4.6%; }
-  .listing-hero { min-height: 74svh; padding-left: 1.25rem; padding-right: 1.25rem; }
+  .listing-hero { min-height: 0; justify-content: flex-start; padding: 7rem 1.25rem 2.5rem; }
   .display-heading { font-size: clamp(3.2rem, 13vw, 6rem); }
-  .portfolio-body { padding: 3rem 1.25rem 5rem; }
+  .portfolio-body { padding: 2.5rem 1.25rem 5rem; }
   .portfolio-layout { grid-template-columns: 1fr; gap: 1.5rem; }
   .listing-sidebar { position: static; }
   .listing-sidebar .sidebar-title { display: none; }

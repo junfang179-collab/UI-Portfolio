@@ -236,7 +236,14 @@ body.work-modal-active { overflow: hidden; }
     min-height: 100%;
     box-shadow: none;
   }
-  .work-modal-close { display: none; }
+  .work-modal-close {
+    display: flex;
+    top: calc(var(--navbar-height, 4.8rem) + 0.75rem);
+    right: clamp(0.75rem, 4vw, 1.5rem);
+    width: 44px;
+    height: 44px;
+    background: rgba(18, 19, 21, 0.92);
+  }
   .work-modal-header { padding: 1.75rem var(--layout-padding-x, 1.5rem) 1rem; }
   .work-modal-body { padding: 1.25rem var(--layout-padding-x, 1.5rem) 2.5rem; }
 }
