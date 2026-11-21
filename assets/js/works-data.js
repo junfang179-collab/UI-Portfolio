@@ -151,7 +151,7 @@ window.WORKS_DATA=[
   "id": 37,
   "cover": "assets/works/smarticlean-cover.png",
   "title": "Smart iClean管理系统",
-  "category": "管理后台",
+  "category": "数据可视化与管理后台",
   "date": "2026-11-01T00:00:00.000Z",
   "description": "Smart iClean 是一套以实时数据驱动空间运维决策的智慧清洁数据平台，把空间、事件与人员映射为统一的数据对象，让清洁管理从「数据展示」走向「运营决策」。提供全局驾驶舱、空间部署、项目管理、质量评估与配置表单等一站式管理服务。",
   "tech": [
@@ -223,7 +223,7 @@ window.WORKS_DATA=[
   "id": 39,
   "cover": "assets/works/campus-cover.png",
   "title": "CAMPUS·TWIN 智慧校园数字孪生平台设计",
-  "category": "数据可视化",
+  "category": "数据可视化与管理后台",
   "date": "2026-11-01T00:00:00.000Z",
   "description": "面向智慧校园的数字孪生可视化平台。以深林绿与荧光青为主色调，构建覆盖全局态势、能耗监控、告警事件与趋势分析的管理大屏，并延展 AI 智能巡检助手交互、完整设计规范与 Blender 三维场景资产，形成从数据感知到空间交互的一体化设计体系。",
   "tech": [
@@ -279,6 +279,31 @@ window.WORKS_DATA=[
    "assets/works/doudou/03.jpg",
    "assets/works/doudou/04.png",
    "assets/works/doudou/05.png"
+  ]
+ },
+ {
+  "id": 42,
+  "cover": "assets/works/slowtravel-cover.jpg",
+  "title": "城市慢游票·文旅海报系列设计",
+  "category": "平面设计",
+  "date": "2026-11-01T00:00:00.000Z",
+  "description": "城市慢游票是一组以「周末，钻进城市烟火里」为主题的文旅 promotional 海报系列，覆盖闽南古厝、长安古都、星城夜味、山城雾都、京华故都、川西雪山、敦煌大漠、羊城早茶与江南水乡九座目的地。以复古邮票车票为视觉母题，统一的票根版式、地标插画与城市限定配色，搭配手绘旅行人物与实景场景合成，形成一套可延展的城市营销视觉模板。",
+  "tech": [
+   "海报设计，文旅视觉，插画合成，票根版式设计，城市IP，AIGC视觉"
+  ],
+  "client": "个人项目",
+  "project_url": "",
+  "protected": false,
+  "images": [
+   "assets/works/slowtravel/01.jpg",
+   "assets/works/slowtravel/02.jpg",
+   "assets/works/slowtravel/03.jpg",
+   "assets/works/slowtravel/04.jpg",
+   "assets/works/slowtravel/05.jpg",
+   "assets/works/slowtravel/06.jpg",
+   "assets/works/slowtravel/07.jpg",
+   "assets/works/slowtravel/08.jpg",
+   "assets/works/slowtravel/09.jpg"
   ]
  }
 ];

@@ -135,7 +135,7 @@ body { background: #0c0c0c; color: #d7e2ea; font-family: 'Kanit', sans-serif; }
   .service-arrow { font-size: 1rem; }
   .projects > .display-heading { margin: 3rem 0 1rem; }
   .project-stack { padding-top: 1.5rem; }
-  .project-card { top: 74px; min-height: 0; border-radius: 20px; padding: 1rem; margin-bottom: 9vh; }
+  .project-card { top: 74px; min-height: 0; border-radius: 20px; padding: 1rem; margin-bottom: 2.25rem; }
   .project-card-head { gap: .8rem; }
   .project-number { font-size: 2.4rem; }
   .project-category { font-size: .48rem; letter-spacing: .1em; }
