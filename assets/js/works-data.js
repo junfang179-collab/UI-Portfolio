@@ -266,19 +266,20 @@ window.WORKS_DATA=[
   "title": "豆豆 IP形象设计（潮玩盲盒企划）",
   "category": "品牌建设",
   "date": "2026-11-01T00:00:00.000Z",
-  "description": "豆豆是一套面向 AI 学习搭子概念的潮玩盲盒 IP 企划。以暖橙柴犬为原型，塑造戴眼镜与耳机、穿针织外套的治愈系角色，延展角色三视图设定规范、尺寸比例与材质色彩标准、日常九则表情包、豆豆的一天时间轴长卷与功能说明页，并配套社媒封面 Banner，形成从角色设定到商业落地的完整品牌视觉体系。",
+  "description": "豆豆是一套面向 AI 学习搭子概念的潮玩盲盒 IP 企划。以暖橙柴犬为原型，塑造戴眼镜与耳机、穿针织外套的治愈系角色，延展品牌主视觉 KV、角色三视图设定规范、尺寸比例与材质色彩标准、日常九则表情包、豆豆的一天时间轴长卷、功能说明页与社媒封面 Banner，形成从角色设定到商业落地的完整品牌视觉体系。",
   "tech": [
-   "IP形象设计，潮玩盲盒，角色设定规范，表情包设计，品牌视觉，社媒Banner"
+   "IP形象设计，潮玩盲盒，品牌主视觉KV，角色设定规范，表情包设计，品牌视觉，社媒Banner"
   ],
   "client": "个人项目",
   "project_url": "",
   "protected": false,
   "images": [
    "assets/works/doudou/01.png",
-   "assets/works/doudou/02.jpg",
-   "assets/works/doudou/03.jpg",
+   "assets/works/doudou/02.png",
+   "assets/works/doudou/03.png",
    "assets/works/doudou/04.png",
-   "assets/works/doudou/05.png"
+   "assets/works/doudou/05.png",
+   "assets/works/doudou/06.png"
   ]
  },
  {
@@ -304,6 +305,57 @@ window.WORKS_DATA=[
    "assets/works/slowtravel/07.jpg",
    "assets/works/slowtravel/08.jpg",
    "assets/works/slowtravel/09.jpg"
+  ]
+ },
+ {
+  "id": 43,
+  "cover": "assets/works/china-cities-cover.jpg",
+  "title": "中国省市主视觉海报系列设计",
+  "category": "平面设计",
+  "date": "2026-11-01T00:00:00.000Z",
+  "description": "中国省市主视觉海报系列以「山河入画，一城一故乡」为主题，覆盖全国 34 个省级行政区。每幅海报以书法字体与省份简称印章为标识，用飘带式山水长卷串联地标建筑、自然风光、产业成就与地域风物，配以城市宣传语，将地域文化与现代发展凝练成一套统一而富有地方辨识度的主视觉模板。",
+  "tech": [
+   "海报设计，城市主视觉，文旅宣传，插画合成，书法字体设计，AIGC视觉"
+  ],
+  "client": "个人项目",
+  "project_url": "",
+  "protected": false,
+  "images": [
+   "assets/works/china-cities/01.jpg",
+   "assets/works/china-cities/02.jpg",
+   "assets/works/china-cities/03.jpg",
+   "assets/works/china-cities/04.jpg",
+   "assets/works/china-cities/05.jpg",
+   "assets/works/china-cities/06.jpg",
+   "assets/works/china-cities/07.jpg",
+   "assets/works/china-cities/08.jpg",
+   "assets/works/china-cities/09.jpg",
+   "assets/works/china-cities/10.jpg",
+   "assets/works/china-cities/11.jpg",
+   "assets/works/china-cities/12.jpg",
+   "assets/works/china-cities/13.jpg",
+   "assets/works/china-cities/14.jpg",
+   "assets/works/china-cities/15.jpg",
+   "assets/works/china-cities/16.jpg",
+   "assets/works/china-cities/17.jpg",
+   "assets/works/china-cities/18.jpg",
+   "assets/works/china-cities/19.jpg",
+   "assets/works/china-cities/20.jpg",
+   "assets/works/china-cities/21.jpg",
+   "assets/works/china-cities/22.jpg",
+   "assets/works/china-cities/23.jpg",
+   "assets/works/china-cities/24.jpg",
+   "assets/works/china-cities/25.jpg",
+   "assets/works/china-cities/26.jpg",
+   "assets/works/china-cities/27.jpg",
+   "assets/works/china-cities/28.jpg",
+   "assets/works/china-cities/29.jpg",
+   "assets/works/china-cities/30.jpg",
+   "assets/works/china-cities/31.jpg",
+   "assets/works/china-cities/32.jpg",
+   "assets/works/china-cities/33.jpg",
+   "assets/works/china-cities/34.jpg",
+   "assets/works/china-cities/35.jpg"
   ]
  }
 ];
