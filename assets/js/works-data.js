@@ -357,5 +357,25 @@ window.WORKS_DATA=[
    "assets/works/china-cities/34.jpg",
    "assets/works/china-cities/35.jpg"
   ]
+ },
+ {
+  "id": 44,
+  "cover": "assets/works/wuhan-travel-cover.png",
+  "title": "大江东去·武汉文旅小程序设计",
+  "category": "UI设计",
+  "date": "2026-11-01T00:00:00.000Z",
+  "description": "以「大江东去」为主题的武汉文旅小程序 UI/UX 设计，围绕首页、发现、行程、直播四大核心页面，将黄鹤楼、东湖等江城地标与青绿山水插画相融合。配套色彩、字体、栅格间距、圆角、图标与组件等完整设计规范，打造可落地的城市文旅服务体验。",
+  "tech": [
+   "UI/UX设计，文旅小程序，样机展示，设计规范，插画合成，移动端界面"
+  ],
+  "client": "个人项目",
+  "project_url": "",
+  "protected": false,
+  "images": [
+   "assets/works/wuhan-travel/01.png",
+   "assets/works/wuhan-travel/02.png",
+   "assets/works/wuhan-travel/03.jpg",
+   "assets/works/wuhan-travel/04.jpg"
+  ]
  }
 ];
